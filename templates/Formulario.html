@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendador Musical</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎵 Tu Recomendador Musical 🎵</h1>
+        <p>Completa tus preferencias y descubre canciones que se ajustan a tu estado de ánimo y momento del día.</p>
+        <form method="post" action="/recommend/">
+            <!-- Inputs -->
+            <div class="form-group">
+                <label for="Gender">Género:</label>
+                <select name="Gender" id="Gender" required>
+                    <option value="Male">Masculino</option>
+                    <option value="Female">Femenino</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Age">Edad:</label>
+                <select name="Age" id="Age" required>
+                    <option value="6~12">6-12</option>
+                    <option value="12~20">12-20</option>
+                    <option value="20~35">20-35</option>
+                    <option value="35~60">35-60</option>
+                    <option value="60+">60+</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="fav_music_genre">Género Musical Favorito:</label>
+                <select name="fav_music_genre" id="fav_music_genre" required>
+                    <option value="All">Todos</option>
+                    <option value="Rock Electrónico y Energético">Rock Electrónico y Energético</option>
+                    <option value="Música Cultural y Melódica">Música Cultural y Melódica</option>
+                    <option value="Ambiental y Relajante">Ambiental y Relajante</option>
+                    <option value="Acústica y Nostálgica">Acústica y Nostálgica</option>
+                    <option value="Electrónica y House Alternativo">Electrónica y House Alternativo</option>
+                    <option value="Pop Urbano y Ritmos Modernos">Pop Urbano y Ritmos Modernos</option>
+                    <option value="Ritmos Globales y Festivos">Ritmos Globales y Festivos</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="music_time_slot">Franja Horaria:</label>
+                <select name="music_time_slot" id="music_time_slot" required>
+                    <option value="Morning">Mañana</option>
+                    <option value="Afternoon">Tarde</option>
+                    <option value="Evening">Noche</option>
+                    <option value="Night">Madrugada</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="music_Influencial_mood">Estado de Ánimo:</label>
+                <select name="music_Influencial_mood" id="music_Influencial_mood" required>
+                    <option value="Motivational">Motivacional</option>
+                    <option value="Relaxation">Relajación</option>
+                    <option value="Sadness">Tristeza</option>
+                    <option value="Social">Social</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="music_lis_frequency">Frecuencia de Música:</label>
+                <select name="music_lis_frequency" id="music_lis_frequency" required>
+                    <option value="leisure time">Tiempo Libre</option>
+                    <option value="Workout session">Ejercicio</option>
+                    <option value="Study Hours">Estudio</option>
+                    <option value="social gatherings">reuniones sociales</option>
+                    <option value="office hour">Horas de oficina</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Number_of_Songs">Número de Canciones:</label>
+                <input type="number" name="Number_of_Songs" id="Number_of_Songs" required min="1" max="50">
+            </div>
+
+            <button type="submit" class="btn">🎧 Generar Recomendaciones</button>
+        </form>
+    </div>
+</body>
+</html>

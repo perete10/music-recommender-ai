@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de Tu Playlist</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="resultados-page">
+    <header>
+        <h1>🎧 Tu Playlist Personalizada</h1>
+        <nav>
+            <a href="/home.html">Home</a>
+            <a href="/recommend.html">Recomendador</a>
+            <a href="/perfil.html">Perfil</a>
+            <a href="/contacte.html">Contacte</a>
+        </nav>
+    </header>
+    <!-- Aquí va el resto del contenido de resultados.html -->
+</body>
+
+    <main class="results-container">
+        <!-- Introducción / Bienvenida -->
+        <section class="welcome-section">
+            <h2>🎉 ¡Bienvenido, amante de la música!</h2>
+            <p>
+                Hola, <strong>{{ user_data.Gender or 'amante de la música' }}</strong> de <strong>{{ user_data.Age or 'edad desconocida' }}</strong>.
+                Según tus preferencias, disfrutas de la música <strong>{{ user_data.fav_music_genre or 'variada' }}</strong>, 
+                especialmente en la <strong>{{ user_data.music_time_slot or 'franja horaria preferida' }}</strong>.
+                Cuando estás <strong>{{ user_data.music_Influencial_mood or 'en un estado emocional único' }}</strong>, 
+                escuchas música <strong>{{ user_data.music_lis_frequency or 'en cualquier momento del día' }}</strong>.
+            </p>
+            <p>¡Hemos preparado algo especial para ti! 🎶</p>
+        </section>
+
+        <!-- Canción asignada -->
+        <section class="assigned-song">
+            <h2>🎶 Canción Asignada</h2>
+            {% if assigned_song %}
+            <div class="assigned-container">
+                <div class="assigned-cover">
+                    <img src="https://source.unsplash.com/200x200/?music,{{ assigned_song.SuperGenre }}" alt="Cover">
+                </div>
+                <div class="assigned-info">
+                    <h3>{{ assigned_song.track_name or 'Título desconocido' }}</h3>
+                    <p><strong>Artista:</strong> {{ assigned_song.artists or 'Artista desconocido' }}</p>
+                    <p><strong>Popularidad:</strong> {{ assigned_song.popularity or 'No disponible' }}</p>
+                    <p><strong>Género:</strong> {{ assigned_song.SuperGenre or 'Género desconocido' }}</p>
+                </div>
+            </div>
+            {% else %}
+            <p>No se encontró ninguna canción asignada.</p>
+            {% endif %}
+        </section>
+
+        <!-- Canciones recomendadas -->
+        <section class="recommended-songs">
+            <h2>🎵 Canciones Recomendadas</h2>
+            <div class="song-list">
+                {% if recommended_songs %}
+                {% for song in recommended_songs %}
+                <div class="song-card">
+                    <h3>{{ song.track_name or 'Título desconocido' }}</h3>
+                    <p><strong>Artista:</strong> {{ song.artists or 'Artista desconocido' }}</p>
+                    <p><strong>Popularidad:</strong> {{ song.popularity or 'No disponible' }}</p>
+                    <p><strong>Género:</strong> {{ song.SuperGenre or 'Género desconocido' }}</p>
+                </div>
+                {% endfor %}
+                {% else %}
+                <p>No se encontraron canciones recomendadas.</p>
+                {% endif %}
+            </div>
+        </section>
+    </main>
+</body>
+</html>
