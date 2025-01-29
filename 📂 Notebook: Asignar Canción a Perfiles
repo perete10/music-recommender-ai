@@ -1,0 +1,1 @@
+Este notebook se encarga de asignar canciones a los perfiles de los usuarios. Utiliza algoritmos de filtrado colaborativo y análisis de preferencias para relacionar las características de las canciones con los gustos individuales de cada usuario, permitiendo generar recomendaciones personalizadas basadas en su historial y preferencias específicas.
