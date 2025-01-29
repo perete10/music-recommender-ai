@@ -1,6 +1,6 @@
 🎵 Recomendador de Playlists Personalizadas 🎧
 
-¡Hola! Soy [Tu Nombre], estudiante de Inteligencia Artificial y Big Data. 🎓✨ Estoy emocionado de presentar mi proyecto innovador: un Recomendador de Playlists Personalizadas que transforma tu experiencia musical. 🌟
+¡Hola! Soy Pere Amat, estudiante de Inteligencia Artificial y Big Data. 🎓✨ Estoy emocionado de presentar mi proyecto innovador: un Recomendador de Playlists Personalizadas que transforma tu experiencia musical. 🌟
 
 🔍 ¿Qué hace único a mi proyecto?
 
@@ -25,7 +25,7 @@ Interacción Dinámica 🗣️: Ajusta tus listas en tiempo real según tus pref
 
 Python 🐍
 Pandas y Scikit-learn 📊
-Tableau 📈
+Tableau y POWERBI 📈
 APIs de Spotify y LastFM 🎤
 📈 Resultados y Futuras Mejoras:
 
